@@ -58,6 +58,9 @@ resetButton.addEventListener("click", function () {
   pickedColor = pickColor();
   // update the target in the game heading
   pick.textContent = pickedColor;
+  messageDisplay.textContent = " ";
+  h1.style.background = "steelblue";
+
   //change color of square
 
   for (var i = 0; i < squares.length; i++) {
@@ -95,6 +98,7 @@ for (var i = 0; i < squares.length; i++) {
       changeColor(pickedColor);
       messageDisplay.textContent = "Correct!";
       resetButton.textContent = "Play Again";
+      h1.style.background = pickedColor;
     } else {
       //if ever in loops the element at index dont work use "this" instead,here after click page refreshes and value of i is lost.
       //squares[i].style.background = "#232323";
